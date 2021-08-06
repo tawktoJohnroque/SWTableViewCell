@@ -92,9 +92,6 @@ static NSString * const kTableViewCellContentView = @"UITableViewCellContentView
     UIView *contentViewParent = self;
     UIView *clipViewParent = self.cellScrollView;
     
-    // fix app crashing on iOS 15
-    [self.contentView superview];
-    
     NSArray *cellSubviews = [contentViewParent subviews];
     [self insertSubview:self.cellScrollView atIndex:0];
     for (UIView *subview in cellSubviews)
